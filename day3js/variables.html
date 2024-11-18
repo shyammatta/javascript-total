@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ff{
+            margin-left: 88px;
+        }
+        #carts{
+            background-color: beige;
+            width: 200px;
+            padding: 15px;
+            text-align: center;
+        }
+        #container{
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+        img{
+            width: 200px;
+            height:150px;
+        }
+
+        #carts h3,h2{
+            text-align: left;
+        }
+        button{
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+        .remove{
+            margin-left: 20px;
+            background-color: red;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 id="ff">Snaks</h1>
+
+    <div id="container">
+<div id="vadapavs">
+    <img src="./vada-pav.jpg" alt="">
+    <h3>VADAPAV</h3>
+    <button onclick="
+    totalcost=totalcost+15;
+    vitem=vitem+1;
+    document.getElementById('cost').textContent='midi mottam '+totalcost+'  aindi';
+
+    document.getElementById('vadapav').textContent=`Vadapav : 15 X ${vitem} = ${15*vitem}`;">add to cart</button>
+    <button class="remove" onclick="
+    totalcost=totalcost-15;
+
+    vitem=vitem-1;
+    if(vitem>0){
+        document.getElementById('vadapav').textContent=`Vadapav : 15 X ${vitem} = ${15*vitem}`;           }
+           else{
+            document.getElementById('vadapav').textContent='';
+
+
+           }
+    document.getElementById('cost').textContent='midi mottam '+totalcost+'  aindi';
+
+    ">remove</button>
+
+
+</div>
+
+<div id="samosas">
+    <img src="./samosa.jpeg" alt="">
+    <h3>SAMOSA</h3>
+        <button onclick="
+        totalcost=totalcost+15;
+        sitem=sitem+1;
+        document.getElementById('cost').textContent='midi mottam '+totalcost+'  aindi';
+
+        document.getElementById('samosa').textContent=`Samosa : 15 X ${sitem} = ${15*sitem}`;">add to cart</button>
+        <button class="remove" onclick="
+        totalcost=totalcost-15;
+        
+        sitem=sitem-1;
+        if(sitem>0){
+            document.getElementById('samosa').textContent=`Samosa : 15 X ${sitem} = ${15*sitem}`;
+           }
+           else{
+            document.getElementById('samosa').textContent='';
+        }
+        document.getElementById('cost').textContent='midi mottam '+totalcost+'  aindi';
+        
+        ">remove</button>
+        
+</div>
+
+<div id="teas">
+    <img src="./tea.jpeg" alt="">
+    <h3>TEA</h3>
+        <button onclick="
+        totalcost=totalcost+10;
+        titem=titem+1
+        document.getElementById('cost').textContent='midi mottam '+totalcost+'  aindi';
+        
+
+        document.getElementById('tea').textContent=`Tea : 10 X ${titem} = ${15*titem}` ;">add to cart</button>
+        <button class="remove" onclick="
+           totalcost=totalcost-10;
+       
+           titem=titem-1;
+           document.getElementById('cost').textContent='midi mottam '+totalcost+'  aindi';
+           if(titem>0){
+            document.getElementById('tea').textContent=`Tea : 10 X ${titem} = ${15*titem}`;
+
+           }
+           else{
+            document.getElementById('tea').textContent='';
+
+
+           }
+       
+           ">remove</button>
+       
+
+</div>
+<br>
+<div id="carts">
+            <h1>cart items</h1>
+            <h3 id="vadapav"></h3>
+            <h3 id="samosa"></h3>
+            <h3 id="tea"></h3>
+            <h2 id="cost"> </d>
+</div>
+</div>
+
+
+
+
+    <script>
+        totalcost=0
+        let vitem=0;
+        let sitem=0;
+        let titem=0;
+
+        const name="shyam";
+        console.log(`my name is: ${name}`);
+        console.log(`i have eaten vadapav and tea`);
+
+
+
+
+
+    </script>
+</body>
+</html>

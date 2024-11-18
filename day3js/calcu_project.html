@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            border: 1px solid black;
+            width: fit-content;
+            padding: 10px;
+        }
+        button{
+            padding: 15px;
+            margin: 5px;
+           width: 50px; 
+           font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <h2 id="conclusion"></h2>
+    <br>
+    <br>
+    <button onclick="document.getElementById('conclusion').textContent=''">C</button>
+    <button>%</button>
+    <button>b</button>
+    <button>/</button>
+
+    <br><br>
+    <button onclick="item=7">7</button>
+    <button onclick="item=8">8</button>
+    <button onclick="item=9">9</button>
+    <button onclick="previtem=item;
+    items='x';
+     ">X</button>
+    <br>
+    <br>
+    <button onclick="item=4">4</button>
+    <button onclick="item=5">5</button>
+    <button onclick="item=6">6</button>
+    <button onclick="previtem=item ;items='-';
+    previtem=item">-</button>
+
+    <br>
+    <br>
+    <button onclick="item=1">1</button>
+    <button onclick="item=2">2</button>
+    <button onclick="item=3">3</button>
+    <button onclick="previtem=item;
+    items='+';
+    ">+</button>
+
+    <br><br>
+    <button>00</button>
+    <button>0</button>
+    <button>.</button>
+    <button onclick="
+    switch(items){
+    case '+':
+    res=previtem+item;
+    break;
+    case '-':
+    res=previtem-item;
+    break;
+
+    case 'x':
+    res=previtem*item;
+    break;
+
+    default:
+        res=0;
+    }
+    document.getElementById('conclusion').textContent=`result: ${res}`"
+    >=</button>
+
+
+
+
+</div>
+
+<script>
+    let item=0;
+    let res=0;
+    let previtem=0;
+</script>
+
+
+
+</body>
+</html>
